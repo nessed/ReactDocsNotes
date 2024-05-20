@@ -2,14 +2,13 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  function MyButton() {
+  
     const [count, setCount] = useState(0);
-
-
-  }
-  function handleClick() {
-    alert('Clicked');
-  }
+    function handleClick() {
+      setCount(count+1);
+    }
+  
+  
   const state = true
   const items = [
     { name: 'cabbage', id: 1, isFruit: false },
@@ -30,12 +29,13 @@ function App() {
       <div>
         <ul>{listItems}</ul>
       </div>
+      <button onClick={handleClick}> Hi {count}</button>
       {state ? (
         <div>
-          <button onClick={handleClick}> Hello </button>
+          <button onClick={handleClick}> Hello {count} </button>
         </div>
       ) : (
-        <button onClick={handleClick}> Bye </button>
+        <button onClick={handleClick}> Bye {count} </button>
       )}
     </div>
   );
