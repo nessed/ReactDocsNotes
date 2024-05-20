@@ -1,0 +1,45 @@
+React
+```
+function App() {
+  const state = true 
+  return (
+    <div className="App bg-blue-500 h-">
+    { state ? (
+      <div> Hello </div>
+    ) :(
+      <div> Bye </div>
+    )}
+    </div>
+  );
+}
+export default App;
+```
+1. Javascript like definition of variables should be done before the return statement, as after the return statement only html can be used
+This is to conditionally render something in react using ternary operators. 
+We need to use curly brackets to enable the use of javascript so the full code will be under the brackets
+state ? says 'if state is true then
+: says 'else' do this
+each statement has its own bracket
+
+When you don’t need the else branch, you can also use a shorter logical && syntax:
+This basically states that if isloggedin is true then return adminPanel component otherwise dont return anything
+```
+<div>
+  {isLoggedIn && <AdminPanel />}
+</div>
+```
+
+```
+  const products = [
+    {title:'cabbage', id:1},
+    {title:'garlic', id:2},
+    {title:'apple',id:3}
+  ];
+  
+  const listItems = products.map(product => 
+    <li key={product.id}>
+      {product.title}
+    </li>
+  );
+```
+to use map, 1) Define a const, run map through products in a new variable called product, arrow function it to open a list with a key of the new variable and id, close tag and then open product. title
